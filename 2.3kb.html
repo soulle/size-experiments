@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Some title</title>
+    <meta name="description" content="Some description" />
+
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .bg {
+        animation: slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+        bottom: 0;
+        left: -50%;
+        opacity: 0.5;
+        position: fixed;
+        right: -50%;
+        top: 0;
+        z-index: -1;
+      }
+
+      .bg2 {
+        animation-direction: alternate-reverse;
+        animation-duration: 4s;
+      }
+
+      .bg3 {
+        animation-duration: 5s;
+      }
+
+      .content {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 0.25em;
+        box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+        left: 50%;
+        padding: 10vmin;
+        position: fixed;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      h1 {
+        font-family: monospace;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(-25%);
+        }
+        100% {
+          transform: translateX(25%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+      <h1>Some header</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae
+        venenatis augue, eget gravida elit. Etiam rutrum dignissim rhoncus.
+        Fusce pulvinar tortor sed nibh ullamcorper viverra. Morbi tincidunt
+        auctor urna, at lobortis metus ultricies vitae. Pellentesque efficitur,
+        nisl ac pharetra tinciduntut, quamet nulla sagittis magna, vel malesuada
+        ligula ipsum eu ex. Nullam ut sodales lacus. Etiam efficitur quis justo
+        in euismod. Fusce interdum maximus neque ut ultrices. Proin ut risus
+        quis turpis semper ornare. Nuncen vel augue ut neque dictum interdum. Ut
+        eget nisl tincidunt, sollicitudin velit non, facilisis ante. Quisque
+        auctor ante metus, non fermentum augue interdum sed. Donec nunc.
+      </p>
+      <footer>Some footer</footer>
+    </div>
+  </body>
+</html>
