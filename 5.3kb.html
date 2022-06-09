@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Some title</title>
+    <meta name="description" content="Some description" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding: 40px 5% 0;
+      }
+
+      .container {
+        padding: 40px 5%;
+      }
+
+      .heading-text {
+        margin-bottom: 2rem;
+      }
+
+      .heading-text span {
+        font-weight: 100;
+      }
+
+      /* Responsive image gallery rules begin*/
+
+      .image-gallery {
+        /* Mobile first */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .image-gallery .column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .image-item img {
+        width: 100%;
+        border-radius: 5px;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .image-gallery {
+          flex-direction: row;
+        }
+      }
+
+      /* overlay styles */
+
+      .image-item {
+        position: relative;
+        cursor: pointer;
+      }
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(57, 57, 57, 0.502);
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        transition: all 0.2s 0.1s ease-in-out;
+        color: #fff;
+
+        /* center overlay content */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* hover */
+      .image-item:hover .overlay {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Some header</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae
+        venenatis augue, eget gravida elit. Etiam rutrum dignissim rhoncus.
+        Fusce pulvinar tortor sed nibh ullamcorper viverra. Morbi tincidunt
+        auctor urna, at lobortis metus ultricies vitae. Pellentesque efficitur,
+        nisl ac pharetra tinciduntut, quamet nulla sagittis magna, vel malesuada
+        ligula ipsum eu ex. Nullam ut sodales lacus. Etiam efficitur quis justo
+        in euismod. Fusce interdum maximus neque ut ultrices. Proin ut risus
+        quis turpis semper ornare. Nuncen vel augue ut neque dictum interdum. Ut
+        eget nisl tincidunt, sollicitudin velit non, facilisis ante. Quisque
+        auctor ante metus, non fermentum augue interdum sed. Donec nunc.
+      </p>
+    </header>
+
+    <div class="container">
+      <h2 class="heading-text">Responsive <span>image gallery</span></h2>
+      <div class="image-gallery">
+        <div class="column">
+          <div class="image-item">
+            <img src="https://source.unsplash.com/VWcPlbHglYc" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+          <div class="image-item">
+            <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+          <div class="image-item">
+            <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="image-item">
+            <img src="https://source.unsplash.com/O0N9MF--hK4" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+          <div class="image-item">
+            <img src="https://source.unsplash.com/FV3GConVSss" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+          <div class="image-item">
+            <img src="https://source.unsplash.com/0ESjL-Nw22Y" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+          <div class="image-item">
+            <img src="https://source.unsplash.com/KTVn62x6fFw" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="image-item">
+            <img src="https://source.unsplash.com/VSeVhmW4_JQ" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+          <div class="image-item">
+            <img src="https://source.unsplash.com/07aFaTf24Kg" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+          <div class="image-item">
+            <img src="https://source.unsplash.com/DqyYTM7pR2o" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+          <div class="image-item">
+            <img src="https://source.unsplash.com/IdNOTjPeHrE" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </div>
+        </div>
+      </div>
+      <footer>Some footer</footer>
+    </div>
+  </body>
+</html>
